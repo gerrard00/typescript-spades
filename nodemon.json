@@ -1,0 +1,13 @@
+{
+  "verbose": true,
+  "ignore": [
+    "build/*"
+  ],
+  "ext": "ts",
+  "execMap": {
+    "ts": "(tsc && node ./build/spades-game.js) || true"
+  },
+  "watch": [
+    "*.ts"
+  ]
+}
