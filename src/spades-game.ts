@@ -1,18 +1,20 @@
 import { Card, PlayerHand, dealCards } from './cards';
 
 export class SpadesGame {
-constructor() {
-  this.playerHands = dealCards();
+  constructor() {
+    this.playerHands = dealCards();
+    this.currentRound = 0;
+  }
 
-  console.log('\n');
-  this.playerHands.forEach((playerHand) => {
-    console.log(`${playerHand.playerName}\n`);
-    playerHand.cards.forEach(card => process.stdout.write(`${card.getName()}\t`));
-    console.log('\n\n');
-  });
-  console.log('\n');
-}
+  showHands(): void {
+    this.playerHands.forEach((playerHand) => {
+      console.log(`${playerHand.playerName}\n`);
+      playerHand.cards.forEach(card => process.stdout.write(`${card.getName()}\t`));
+      console.log('\n\n');
+    });
+  }
 
-playerHands: PlayerHand[];
+  playerHands: PlayerHand[];
+  currentRound: number;
  }
 
