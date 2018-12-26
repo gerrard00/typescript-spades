@@ -31,7 +31,7 @@ export class PlayerHand {
   cards: Card[];
 }
 
-export function dealCards() {
+export function dealCards(): PlayerHand[] {
   const cards: Card[] = [...new Array(52)]
     .map((_, idx) => {
       return new Card(idx);
